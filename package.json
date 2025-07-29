@@ -9,13 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@radix-ui/react-alert-dialog": "^1.1.14",
     "@radix-ui/react-aspect-ratio": "^1.1.7",
-=======
     "@clerk/nextjs": "^6.27.1",
     "@clerk/themes": "^2.4.2",
->>>>>>> db1425a345ba0ae988fa18d8d485cba6521db31c
     "@radix-ui/react-slot": "^1.2.3",
     "@uploadthing/react": "^7.3.2",
     "class-variance-authority": "^0.7.1",
