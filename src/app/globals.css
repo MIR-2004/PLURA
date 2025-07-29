@@ -1,3 +1,6 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
 .theme-custom {
     /* Name: custom color palette
        Author: Ilias Ism
