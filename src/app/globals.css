@@ -1,40 +1,155 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-.theme-custom {
+html,
+body{
+    height: 100vh;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+@theme{
+    --color-gradiant: var(--gradient);
+
+    --color-background:  var(--background);
+    --color-foreground:  var(--foreground);
+
+    --color-muted: var(--muted);
+    --color-muted-foreground:  var(--muted-foreground);
+
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+
+    --color-border: var(--border);
+    --color-input: var(--input);
+
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+    
+    --color-ring: var(--ring);
+
+
+}
+
+
+:root {
     /* Name: custom color palette
        Author: Ilias Ism
        URL: https://gradient.page */
 
     /* CSS: .bg-gradient { background: var(--gradient) } */
-    --gradient: #355C7D;
 
-    --background: 220 26% 2.8%;
-    --foreground: 220 4% 96.75%;
+    --background: hsl(216 100% 98.04%);
+    --foreground: hsl(213.6 100% 4.9%);
 
-    --muted: 220 20% 10.5%;
-    --muted-foreground: 220 4% 53.5%;
+    --muted: hsl(213.6 100% 95.1%);
+    --muted-foreground: hsl(0 0% 40%);
 
-    --popover: 220 57% 4.55%;
-    --popover-foreground: 220 4% 96.75%;
+    --popover: hsl(0 0% 100%);
+    --popover-foreground: hsl(213.6 100% 4.9%);
 
-    --card: 220 57% 4.55%;
-    --card-foreground: 220 4% 96.75%;
+    --card: hsl(216 100% 98.04%);
+    --card-foreground: hsl(213.5 100% 4.9%);
 
-    --border: 220 20% 10.5%;
-    --input: 220 20% 10.5%;
+    --border: hsl(0 0% 90.2%);
+    --input: hsl(0 0% 90.2%);
 
-    --primary: 220 40% 35%;
-    --primary-foreground: 220 4% 96.75%;
+    --primary: hsl(214.12 100% 50%);
+    --primary-foreground: hsl(0 0% 100%);
 
-    --secondary: 220 20% 10.5%;
-    --secondary-foreground: 220 4% 96.75%;
+    --secondary: hsl(214.74 100% 92.55%);
+    --secondary-foreground: hsl(216 100% 0.98%);
 
-    --accent: 220 20% 10.5%;
-    --accent-foreground: 220 4% 96.75%;
+    --accent: hsl(213.6 100% 95.1%);
+    --accent-foreground: hsl(214.12 100% 50%);
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 220 4% 96.75%;
+    --destructive: hsl(0 84.2% 50.2%);
+    --destructive-foreground: hsl(210 40% 98%);
 
-    --ring: 220 40% 35%;
+    --ring: hsl(214.12 100% 50%);
+
+    --radius: 0.5rem;
+}
+
+.dark{
+
+
+    --background: hsl(220 65% 3.52%);
+    --foreground: hsl(220 10% 97.2%);
+
+    --muted: hsl(220 50% 13.2%);
+    --muted-foreground: hsl(220 10% 54.4%);
+
+    --popover: hsl(220 45% 5.72%);
+    --popover-foreground: hsl(220 10% 97.2%);
+
+    --card: hsl(220 45% 5.72%);
+    --card-foreground: hsl(220 10% 97.2%);
+
+    --border: hsl(220 50% 13.2%);
+    --input: hsl(220 50% 13.2%);
+
+    --primary: hsl(220 100% 44%);
+    --primary-foreground: hsl(220 10% 97.2%);
+
+    --secondary: hsl(220 50% 13.2%);
+    --secondary-foreground: hsl(220 10% 97.2%);
+
+    --accent: hsl(220 50% 13.2%);
+    --accent-foreground: hsl(220 10% 97.2%);
+
+    --destructive: hsl(0 62.3% 30.6%);
+    --destructive-foreground: hsl(220 10% 97.2%);
+
+    --ring: hsl(220 100% 44%);
+
+    --radius: 0.5rem;
+
+}
+
+
+@layer base{
+    *{
+        @apply border-border;
+    }
+    body{
+        @apply bg-background text-foreground;
+    }
+}
+
+.dotpattern{
+    background-image: radial-gradient(rgb(35, 40, 68) 1px);
+    background-size: 25px 25px;
+}
+
+.use-automation-zoom-in{
+    animation: automation-zoom-in 0.5s;
+}
+
+@keyframes automation-zoom-in{
+    0%{
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
 }

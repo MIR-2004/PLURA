@@ -1,4 +1,7 @@
 const config = {
+  corePlugins: {
+    preflight: true,
+  },
   plugins: ["@tailwindcss/postcss"],
 };
 
